@@ -16,7 +16,7 @@
 		<p>Created by <a href="http://www.coolwebcreations.de" target="_blank">Mike Brandner | coolwebcreations.de</a>.</p>
 	]]></description>
 	<updateservers>
-		<server type="extension" priority="1" name="JMaterialized Update Site">https://raw.githubusercontent.com/m-b-o/jmaterialized/master/manifest.xml</server>
+		<server type="extension" priority="1" name="JMaterialized Update Site">https://raw.githubusercontent.com/m-b-o/jmaterialized/master/jmaterializedupdates.xml</server>
 	</updateservers>
 	
 	<files><!-- no need to change -->
