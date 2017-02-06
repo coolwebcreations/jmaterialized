@@ -10,10 +10,14 @@
 	<authorEmail>mike@coolwebcreations.de</authorEmail>
 	<authorUrl>http://www.coolwebcreations.de</authorUrl>
 	<version>0.0.5</version>
+	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
 	<description><![CDATA[ 
 		<h1>cool Webcreations Materialize Template</h1>
 		<p>Created by <a href="http://www.coolwebcreations.de" target="_blank">Mike Brandner | coolwebcreations.de</a>.</p>
-	]]></description><!-- change the description as you like -->
+	]]></description>
+	<updateservers>
+		<server type="extension" priority="1" name="JMaterialized Update Site">https://raw.githubusercontent.com/m-b-o/jmaterialized/master/manifest.xml</server>
+	</updateservers>
 	
 	<files><!-- no need to change -->
 		<folder>css</folder>
