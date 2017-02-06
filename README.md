@@ -1,2 +1,6 @@
 # jmaterialized
-Joomla! Material Design Template using MaterializedCSS
+A Joomla! materialdesign Template by using materialize CSS
+
+
+
+
