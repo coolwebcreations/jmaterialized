@@ -1,0 +1,75 @@
+/* FRONTEND LESS
+****************/
+
+html {
+	overflow-y: scroll;
+}
+
+body {
+
+}
+
+
+
+/* YOUR CSS HERE */
+
+/* Button Design */
+.btn, .btn-large {
+  text-decoration: none;
+  color: #fff;
+  background-color: #29b6f6;
+  text-align: center;
+  letter-spacing: .5px;
+  transition: .2s ease-out;
+  cursor: pointer;
+}
+
+.btn:hover, .btn-large:hover {
+  background-color: #0089ec;
+}
+
+.btn-floating {
+  display: inline-block;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0;
+  background-color: #29b6f6;
+  border-radius: 50%;
+  transition: .3s;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.btn-floating:hover {
+  background-color: #29b6f6;
+}
+
+.card.medium {
+  height: 400px;
+}
+
+.card-panel.medium {
+  height: 400px;
+}
+
+.alert {
+  color: red;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1170px) {}
