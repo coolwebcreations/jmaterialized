@@ -104,9 +104,8 @@ $doc->addStyleSheet($tpath.'/css/template.css');
 		</div>
 	<?php endif; ?>
 	
-	<div class="section white">
+	<div class="section">
 		<div class="container">
-				<br><br>
 	<!--   Promo Moduleposition   -->
 					<?php if ($this->countModules('promo') && $hideByView == false && $hideByEdit == false): ?>	
 			<div class="row center">promo
@@ -118,12 +117,14 @@ $doc->addStyleSheet($tpath.'/css/template.css');
 		</div>
 	  </div>
 	  
-    <div class="section">
-	<!--   Banner Moduleposition   -->
-		<div class="row center">banner
+    	<div class="section">
+		<div class="container">
+		<!--   Banner Moduleposition   -->
+			<div class="row center">banner
 				<?php if ($this->countModules('banner') && $hideByView == false && $hideByEdit == false): ?>
-            	<jdoc:include type="modules" name="banner" />
-            	<?php endif; ?>
+            			<jdoc:include type="modules" name="banner" />
+            			<?php endif; ?>
+			</div>
 		</div>
 	</div>
 
