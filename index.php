@@ -65,13 +65,13 @@ $doc->addStyleSheet($tpath.'/css/template.css');
 		<nav class="light-blue lighten-1" role="navigation">
 			<div class="container">
 				<div class="nav-wrapper">
-						<?php if ($this->countModules('top-navigation') && $hideByView == false && $hideByEdit == false): ?>				
+					<?php if ($this->countModules('top-navigation') && $hideByView == false && $hideByEdit == false): ?>				
 					<a id="logo-container" href="<?php echo $this->baseurl; ?>/" class="brand-logo"><img class="" style="width: 100%; padding: 5px;" src="images/logos/coolwebcreations_white_180px.png" alt="cool Webcreations"></a>
 					<a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
-							<jdoc:include type="modules" name="top-navigation" style="none" />
-						<?php endif; ?>	
-	<!--   mobile menu here   -->	
-							<jdoc:include type="modules" name="collapse-left" style="none" />
+					<jdoc:include type="modules" name="top-navigation" style="none" />
+					<?php endif; ?>	
+					<!--   mobile menu here   -->	
+					<jdoc:include type="modules" name="collapse-left" style="none" />
 				</div>       
 			</div>
 		</nav>
@@ -95,18 +95,20 @@ $doc->addStyleSheet($tpath.'/css/template.css');
 		</div>
 	<?php endif; ?>
   
-    <!--   Breadcrumb Moduleposition   -->
-	<?php if ($this->countModules('breadcrumb') && $hideByView == false && $hideByEdit == false): ?>
+    	<!--   Breadcrumb Moduleposition   -->
+	<div class="section">
+		<?php if ($this->countModules('breadcrumb') && $hideByView == false && $hideByEdit == false): ?>
 		<div class="container">
 			<div class="col s12">
 				<jdoc:include type="modules" name="breadcrumb" />
-            </div>
+            		</div>
 		</div>
-	<?php endif; ?>
-	
+		<?php endif; ?>
+	</div>
+
+	<!--   Promo Moduleposition   -->	
 	<div class="section">
 		<div class="container">
-	<!--   Promo Moduleposition   -->
 					<?php if ($this->countModules('promo') && $hideByView == false && $hideByEdit == false): ?>	
 			<div class="row center">promo
 				<div class="col s12">
@@ -117,9 +119,9 @@ $doc->addStyleSheet($tpath.'/css/template.css');
 		</div>
 	  </div>
 	  
+	<!--   Banner Moduleposition   -->
     	<div class="section">
 		<div class="container">
-		<!--   Banner Moduleposition   -->
 			<div class="row center">banner
 				<?php if ($this->countModules('banner') && $hideByView == false && $hideByEdit == false): ?>
             			<jdoc:include type="modules" name="banner" />
@@ -130,9 +132,9 @@ $doc->addStyleSheet($tpath.'/css/template.css');
 
 	<!--   Parallax Background Image   -->
 	<?php if ($this->countModules('parallax2') && $hideByView == false && $hideByEdit == false): ?>
-		<div class="parallax-container">
-					<jdoc:include type="modules" name="parallax2" />
-		</div>
+	<div class="parallax-container">
+		<jdoc:include type="modules" name="parallax2" />
+	</div>
 	<?php endif; ?>
 	
 	<!--   Section Modulepositions   -->
