@@ -112,7 +112,7 @@ $doc->addStyleSheet($tpath.'/css/template.css');
 	<div class="section">
 		<div class="container">
 					<?php if ($this->countModules('promo') && $hideByView == false && $hideByEdit == false): ?>	
-			<div class="row center">promo
+			<div class="row center">
 				<div class="col s12">
 					<jdoc:include type="modules" name="promo" />
 				</div>
@@ -124,7 +124,7 @@ $doc->addStyleSheet($tpath.'/css/template.css');
 	<!--   Banner Moduleposition   -->
     	<div class="section">
 		<div class="container">
-			<div class="row center">banner
+			<div class="row center">
 				<?php if ($this->countModules('banner') && $hideByView == false && $hideByEdit == false): ?>
             			<jdoc:include type="modules" name="banner" />
             			<?php endif; ?>
@@ -142,7 +142,7 @@ $doc->addStyleSheet($tpath.'/css/template.css');
 	<!--   Section Modulepositions   -->
     <div class="container">
 			<div class="row center">
-				<div class="col s12">section top
+				<div class="col s12">
 					<?php if ($this->countModules('section-top') && $hideByView == false && $hideByEdit == false): ?>
 					<jdoc:include type="modules" name="section-top" />
 					<?php endif; ?>
@@ -151,19 +151,19 @@ $doc->addStyleSheet($tpath.'/css/template.css');
     </div>
 	<div class="container">
 		<div class="row center">
-			<div class="col s12 m4">section 1
+			<div class="col s12 m4">
 					<?php if ($this->countModules('section1') && $hideByView == false && $hideByEdit == false): ?>
 					<jdoc:include type="modules" name="section1" />
 					<?php endif; ?>
 			</div>
 
-			<div class="col s12 m4">section 2
+			<div class="col s12 m4">
 					<?php if ($this->countModules('section2') && $hideByView == false && $hideByEdit == false): ?>
 					<jdoc:include type="modules" name="section2" />
 					<?php endif; ?>
 			</div>
 
-			<div class="col s12 m4">section 3
+			<div class="col s12 m4">
 					<?php if ($this->countModules('section3') && $hideByView == false && $hideByEdit == false): ?>
 					<jdoc:include type="modules" name="section3" />
 					<?php endif; ?>
@@ -176,12 +176,12 @@ $doc->addStyleSheet($tpath.'/css/template.css');
 	<div class="container">
 		<div class="section">
 			<div class="row center-align">
-				<div class="col l6 s12">content-top-1
+				<div class="col l6 s12">
 					<?php if ($this->countModules('content-top-1') && $hideByView == false && $hideByEdit == false): ?>
 						<jdoc:include type="modules" name="content-top-1" />
 					<?php endif; ?>
 				</div>
-				<div class="col l6 s12">content-top-2
+				<div class="col l6 s12">
 					<?php if ($this->countModules('content-top-2') && $hideByView == false && $hideByEdit == false): ?>
 						<jdoc:include type="modules" name="content-top-2" />
 					<?php endif; ?>
@@ -198,7 +198,7 @@ $doc->addStyleSheet($tpath.'/css/template.css');
 	<?php endif; ?>
 	
 	<!--   Component   -->
-	<div class="section white">component
+	<div class="section">
 		<div class="container">
 			<div class="row">
 				<div class="col s12">
@@ -213,17 +213,17 @@ $doc->addStyleSheet($tpath.'/css/template.css');
 		<div class="section">
 			<div class="row">
 				<?php if ($this->countModules('content-bottom-1') && $hideByView == false && $hideByEdit == false): ?>			
-					<div class="col s12 m4">content-bottom-1
+					<div class="col s12 m4">
 						<jdoc:include type="modules" name="content-bottom-1" />
 					</div>
 				<?php endif; ?>				
 				<?php if ($this->countModules('content-bottom-2') && $hideByView == false && $hideByEdit == false): ?>			
-					<div class="col s12 m4">content-bottom-2
+					<div class="col s12 m4">
 						<jdoc:include type="modules" name="content-bottom-2" />
 					</div>
 				<?php endif; ?>		
 				<?php if ($this->countModules('content-bottom-3') && $hideByView == false && $hideByEdit == false): ?>			
-					<div class="col s12 m4">content-bottom-3
+					<div class="col s12 m4">
 						<jdoc:include type="modules" name="content-bottom-3" />
 					</div>
 				<?php endif; ?>		
@@ -237,17 +237,17 @@ $doc->addStyleSheet($tpath.'/css/template.css');
 			<div class="row">
 	  
 	<!--   Footer Modulepositions   -->
-				<div class="col l6 s12">footer1
+				<div class="col l6 s12">
 					<?php if ($this->countModules('footer1') && $hideByView == false && $hideByEdit == false): ?>
 						<jdoc:include type="modules" name="footer1" />
 					<?php endif; ?>
 				</div>
-				<div class="col l3 s12">footer2
+				<div class="col l3 s12">
 					<?php if ($this->countModules('footer2') && $hideByView == false && $hideByEdit == false): ?>
 						<jdoc:include type="modules" name="footer2" />
 					<?php endif; ?>
 				</div>
-				<div class="col l3 s12">footer3
+				<div class="col l3 s12">
 					<?php if ($this->countModules('footer3') && $hideByView == false && $hideByEdit == false): ?>
 						<jdoc:include type="modules" name="footer3" />
 					<?php endif; ?>
