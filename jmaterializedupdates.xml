@@ -4,8 +4,6 @@
 		<description>Template - JMaterialized</description>
 		<element>jmaterialized</element>
 		<type>template</type>
-		<folder>jmaterialized</folder>
-		<client>site</client>
 		<version>0.0.5</version>
 		<downloads>
 			<downloadurl type="full" format="zip">https://github.com/m-b-o/jmaterialized/archive/master.zip</downloadurl>
@@ -18,6 +16,7 @@
 		</infourl>
 		<maintainer>Mike Brandner</maintainer>
 		<maintainerurl>http://www.coolwebcreations.de</maintainerurl>
+		<section>Updates</section>
 		<targetplatform name="joomla" version="3.[6789]"/>
 	</update>
 </updates>
