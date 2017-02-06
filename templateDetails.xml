@@ -9,11 +9,11 @@
 	<copyright>Copyright © 2017 coolwebcreations.de</copyright>
 	<authorEmail>mike@coolwebcreations.de</authorEmail>
 	<authorUrl>http://www.coolwebcreations.de</authorUrl>
-	<version>0.0.7</version>
+	<version>0.0.8</version>
 	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
 	<description><![CDATA[ 
 		<h1>JMaterialized Template</h1>
-  		<p>Google´s Material Design for Joomla! based on materialize CSS framework</p>
+    <p>Google´s Material Design for Joomla!<br /><span style="color:blue">based on materialize CSS framework</span></p>
 		<p>Created by <a href="http://www.coolwebcreations.de" target="_blank">Mike Brandner | coolwebcreations.de</a>.</p>
 	]]></description>
 	<updateservers>
