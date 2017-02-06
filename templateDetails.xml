@@ -13,7 +13,7 @@
 	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
 	<description><![CDATA[ 
 		<h1>JMaterialized Template</h1>
-  		<p>A Joomla! template based on Google´s Meterial Design</p>
+  		<p>Google´s Material Design for Joomla! based on materialize CSS framework</p>
 		<p>Created by <a href="http://www.coolwebcreations.de" target="_blank">Mike Brandner | coolwebcreations.de</a>.</p>
 	]]></description>
 	<updateservers>
