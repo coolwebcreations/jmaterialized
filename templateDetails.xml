@@ -3,7 +3,7 @@
 
 <extension version="3.3" type="template" client="site" method="upgrade">
 	
-	<name>JMaterialized Template</name>
+	<name>JMaterialized</name>
 	<creationDate>2017-01-25</creationDate>
 	<author>Mike Brandner</author>
 	<copyright>Copyright © 2017 coolwebcreations.de</copyright>
