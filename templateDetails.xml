@@ -4,12 +4,12 @@
 <extension version="3.3" type="template" client="site" method="upgrade">
 	
 	<name>JMaterialized</name>
-	<creationDate>2017-01-25</creationDate>
+	<creationDate>2017-02-06</creationDate>
 	<author>Mike Brandner</author>
 	<copyright>Copyright © 2017 coolwebcreations.de</copyright>
 	<authorEmail>mike@coolwebcreations.de</authorEmail>
 	<authorUrl>http://www.coolwebcreations.de</authorUrl>
-	<version>0.0.5</version>
+	<version>0.0.6</version>
 	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
 	<description><![CDATA[ 
 		<h1>cool Webcreations Materialize Template</h1>
