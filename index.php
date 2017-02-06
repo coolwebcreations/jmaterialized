@@ -61,29 +61,27 @@ $doc->addStyleSheet($tpath.'/css/template.css');
 </head>
   
 <body class="<?php echo (($menu->getActive() == $menu->getDefault()) ? ('front') : ('site')).' '.$active->alias.' '.$pageclass; ?>" role="document">
-	<div class="section light-blue lighten-1">
-		<div class="container">
-			<div class="navbar-fixed">
-				<nav>
-					<div class="nav-wrapper">
-						<?php if ($this->countModules('top-navigation') && $hideByView == false && $hideByEdit == false): ?>				
-						<a id="logo-container" href="<?php echo $this->baseurl; ?>/" class="brand-logo"><img class="" style="width: 100%; padding: 5px;" src="images/logos/coolwebcreations_white_180px.png" alt="cool Webcreations"></a>
-						<a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
-						<jdoc:include type="modules" name="top-navigation" style="none" />
-						<?php endif; ?>	
-						<!--   mobile menu here   -->	
-						<jdoc:include type="modules" name="collapse-left" style="none" />
-					</div>       
-				</nav>
+	<div class="navbar-fixed">
+		<nav class="navbar-fixed transparent">
+			<div class="container ">
+				<div class="nav-wrapper">
+					<?php if ($this->countModules('top-navigation') && $hideByView == false && $hideByEdit == false): ?>				
+					<a id="logo-container" href="<?php echo $this->baseurl; ?>/" class="brand-logo"><img class="" style="width: 100%; padding: 5px;" src="images/logos/coolwebcreations_white_180px.png" alt="cool Webcreations"></a>
+					<a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
+					<jdoc:include type="modules" name="top-navigation" style="none" />
+					<?php endif; ?>	
+					<!--   mobile menu here   -->	
+					<jdoc:include type="modules" name="collapse-left" style="none" />
+				</div>       
 			</div>
-		</div>
-    	</div>
+		</nav>
+	</div>
 
 	<div class="center">
 		<jdoc:include type="message" />
 	</div>
 
-	<!--   big-thing Moduleposition   -->
+	<!--   intro Moduleposition   -->
 	<?php if ($this->countModules('intro') && $hideByView == false && $hideByEdit == false): ?>
 		<div class="row">
 					<jdoc:include type="modules" name="intro" />
