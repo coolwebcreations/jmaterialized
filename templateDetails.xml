@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+
+<extension version="3.3" type="template" client="site" method="upgrade">
+	
+	<name>JMaterialized Template</name>
+	<creationDate>2017-01-25</creationDate>
+	<author>Mike Brandner</author>
+	<copyright>Copyright © 2017 coolwebcreations.de</copyright>
+	<authorEmail>mike@coolwebcreations.de</authorEmail>
+	<authorUrl>http://www.coolwebcreations.de</authorUrl>
+	<version>0.0.5</version>
+	<description><![CDATA[ 
+		<h1>cool Webcreations Materialize Template</h1>
+		<p>Created by <a href="http://www.coolwebcreations.de" target="_blank">Mike Brandner | coolwebcreations.de</a>.</p>
+	]]></description><!-- change the description as you like -->
+	
+	<files><!-- no need to change -->
+		<folder>css</folder>
+		<folder>font</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+		<filename>index.php</filename>
+		<filename>offline.php</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>favicon.ico</filename>
+		<filename>templateDetails.xml</filename>
+	</files>
+	
+	<positions><!-- define the positions for modules here -->
+		<position>top-navigation</position>
+        <position>intro</position>      
+      	<position>collapse-left</position>
+		<position>parallax1</position>
+        <position>parallax2</position>
+        <position>parallax3</position>
+		<position>promo</position>
+        <position>breadcrumb</position>
+		<position>banner</position>
+        <position>section-top</position>
+		<position>section1</position>
+        <position>section2</position>
+        <position>section3</position>
+		<position>content-top-1</position>
+        <position>content-top-2</position>
+        <position>content-bottom-1</position>
+        <position>content-bottom-2</position>
+        <position>content-bottom-3</position>
+		<position>footer1</position>
+		<position>footer2</position>
+		<position>footer3</position>
+        <position>debug</position>
+	</positions>
+
+</extension>
