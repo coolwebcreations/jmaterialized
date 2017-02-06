@@ -19,7 +19,7 @@
 		<server type="extension" priority="1" name="JMaterialized Update Site">https://raw.githubusercontent.com/m-b-o/jmaterialized/master/jmaterializedupdates.xml</server>
 	</updateservers>
 	
-	<files><!-- no need to change -->
+	<files>
 		<folder>css</folder>
 		<folder>font</folder>
 		<folder>html</folder>
@@ -35,7 +35,7 @@
 		<filename>templateDetails.xml</filename>
 	</files>
 	
-	<positions><!-- define the positions for modules here -->
+	<positions>
 		<position>top-navigation</position>
         <position>intro</position>      
       	<position>collapse-left</position>
