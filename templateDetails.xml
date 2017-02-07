@@ -65,7 +65,7 @@
 		<fields name="params">
 			<fieldset name="content" label="HEADER">
 				<field
-					name="Logo Image"
+					name="logo_url"
 					type="text"
 					default=""
 					label="URL Logo"
@@ -73,7 +73,7 @@
 					size="30"
 				/>
 				<field
-					name="Navigation Background"
+					name="nav_background"
 					type="text"
 					default=""
 					label="Background CSS color"
