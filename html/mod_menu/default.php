@@ -20,11 +20,11 @@ if (($tagId = $params->get('tag_id', '')))
 // The menu class is deprecated. Use nav instead
 ?>
 
-<nav class="<?php if ($this->params->get('nav_suffix')) : ?>">
+<nav class="">
   
 <div class="container ">
 <div class="nav-wrapper">
-<a id="logo-container" href="<?php echo $this->baseurl; ?>" class="brand-logo"><img style="height: 65px; padding: 5px;" src="<?php if ($this->params->get('logo_url')) : ?>" alt="cool Webcreations"></a>
+<a id="logo-container" href="<?php echo $this->baseurl; ?>" class="brand-logo"><img style="height: 65px; padding: 5px;" src="" alt="cool Webcreations"></a>
 					<a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
 <ul id="nav-mobile" class="<?php echo $class_sfx ?>" style="transform: translateX(0%);">
 <?php foreach ($list as $i => &$item)
