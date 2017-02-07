@@ -110,46 +110,52 @@ if (($tagId = $params->get('tag_id', '')))
 	}
 }
 ?></ul>
-	
-<ul class="side-nav" id="mobile-menu">	
-<?php foreach ($list as $i => &$item)
-{
-	$class = 'item-' . $item->id;
-
-	if ($item->id == $default_id)
+	<ul id="side-nav" id="nav-mobile">
+	<?php foreach ($list as $i => &$item)
+	if ($item->deeper)
 	{
-		$class .= ' default';
+		$class .= ' deeper';
 	}
 
-
-	if (($item->id == $active_id) || ($item->type == 'alias' && $item->params->get('aliasoptions') == $active_id))
+	if ($item->parent)
 	{
-		$class .= ' current';
+		$class .= ' parent';
 	}
 
-	if (in_array($item->id, $path))
-	{
-		$class .= ' active';
-	}
-	elseif ($item->type == 'alias')
-	{
-		$aliasToId = $item->params->get('aliasoptions');
+	echo '<li class="' . $class . '">';
 
-		if (count($path) > 0 && $aliasToId == $path[count($path) - 1])
-		{
-			$class .= ' active';
-		}
-		elseif (in_array($aliasToId, $path))
-		{
-			$class .= ' alias-parent-active';
-		}
-	}
+	switch ($item->type) :
+		case 'separator':
+		case 'component':
+		case 'heading':
+		case 'url':
+			require JModuleHelper::getLayoutPath('mod_menu', 'default_' . $item->type);
+			break;
 
-	if ($item->type == 'separator')
+		default:
+			require JModuleHelper::getLayoutPath('mod_menu', 'default_url');
+			break;
+	endswitch;
+
+	// The next item is deeper.
+	if ($item->deeper)
 	{
-		$class .= ' divider';
+		echo '<ul class="dropdown-content">';
 	}
-	?></ul>
+	// The next item is shallower.
+	elseif ($item->shallower)
+	{
+		echo '</li>';
+		echo str_repeat('</ul></li>', $item->level_diff);
+	}
+	// The next item is on the same level.
+	else
+	{
+		echo '</li>';
+	}
+}
+?></ul>
+
   </div>
   </div>
 </nav>
