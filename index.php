@@ -79,42 +79,39 @@ $doc->addStyleSheet($tpath.'/css/template.css');
 	</div>
 
 
-<!--   intro Moduleposition   -->
+	<!--   intro Moduleposition   -->
 	<?php if ($this->countModules('intro') && $hideByView == false && $hideByEdit == false): ?>
 		<div class="section">
 					<jdoc:include type="modules" name="intro" />
 		</div>
 	<?php endif; ?>  
   
-    	<!--   Breadcrumb Moduleposition   -->
-		<?php if ($this->countModules('breadcrumb') && $hideByView == false && $hideByEdit == false): ?>
-		<div class="container">
-			<div class="col s12">
-				<jdoc:include type="modules" name="breadcrumb" />
-            		</div>
-		</div>
-		<?php endif; ?>
+    <!--   Breadcrumb Moduleposition   -->
+	<?php if ($this->countModules('breadcrumb') && $hideByView == false && $hideByEdit == false): ?>
+	<div class="container">
+		<div class="col s12">
+			<jdoc:include type="modules" name="breadcrumb" />
+           		</div>
+	</div>
+	<?php endif; ?>
 
 	<!--   Promo Moduleposition   -->	
-
-      	<div class="container">
-        	<?php if ($this->countModules('promo') && $hideByView == false && $hideByEdit == false): ?>	
-			<div class="center">
-				<jdoc:include type="modules" name="promo" />
-				<?php endif; ?>	
-            </div>  
-		</div>
-			
+   	<div class="container">
+       	<?php if ($this->countModules('promo') && $hideByView == false && $hideByEdit == false): ?>	
+		<div class="center">
+			<jdoc:include type="modules" name="promo" />
+        </div> 
+      	<?php endif; ?>	
+	</div>
 	  
 	<!--   Banner Moduleposition   -->
-
-		<div class="container">
-			<div class="center">
-				<?php if ($this->countModules('banner') && $hideByView == false && $hideByEdit == false): ?>
-            			<jdoc:include type="modules" name="banner" />
-            			<?php endif; ?>
-			</div>
+	<div class="container">
+		<div class="center">
+			<?php if ($this->countModules('banner') && $hideByView == false && $hideByEdit == false): ?>
+   			<jdoc:include type="modules" name="banner" />
+       			<?php endif; ?>
 		</div>
+	</div>
 
 
 	<!--   Parallax2 Background Image   -->
@@ -124,30 +121,33 @@ $doc->addStyleSheet($tpath.'/css/template.css');
 	</div>
 	<?php endif; ?>
 	
-	<!--   Section Modulepositions   -->
+	<!--   Section Top Moduleposition   -->
     <div class="container">
-			<div class="row center">
-				<div class="col s12">
-					<?php if ($this->countModules('section-top') && $hideByView == false && $hideByEdit == false): ?>
-					<jdoc:include type="modules" name="section-top" />
-					<?php endif; ?>
-				</div>
-			</div>
+		<div class="row center">
+          	<?php if ($this->countModules('section-top') && $hideByView == false && $hideByEdit == false): ?>
+			<div class="col s12">
+				<jdoc:include type="modules" name="section-top" />
+			</div>              
+			<?php endif; ?>
+		</div>
     </div>
 	<div class="container">
 		<div class="row center">
-			<div class="col s12 m4">
-					<?php if ($this->countModules('section1') && $hideByView == false && $hideByEdit == false): ?>
-					<jdoc:include type="modules" name="section1" />
-					<?php endif; ?>
-			</div>
+          	<!--   Section1 Moduleposition   -->
+            <div class="col s12 m4">
+              	<?php if ($this->countModules('section1') && $hideByView == false && $hideByEdit == false): ?>
+				<jdoc:include type="modules" name="section1" />
+            	<?php endif; ?>  
+			</div>        
 
+          	<!--   Section2 Moduleposition   -->
 			<div class="col s12 m4">
 					<?php if ($this->countModules('section2') && $hideByView == false && $hideByEdit == false): ?>
 					<jdoc:include type="modules" name="section2" />
 					<?php endif; ?>
 			</div>
-
+          
+			<!--   Section3 Moduleposition   -->
 			<div class="col s12 m4">
 					<?php if ($this->countModules('section3') && $hideByView == false && $hideByEdit == false): ?>
 					<jdoc:include type="modules" name="section3" />
@@ -155,7 +155,6 @@ $doc->addStyleSheet($tpath.'/css/template.css');
 			</div>
 		</div>
     </div>
-    <br><br>
 
 		<!--   Content Top Modulepositions   -->
 	<div class="container">
