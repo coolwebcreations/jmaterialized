@@ -9,44 +9,188 @@
 
 defined('_JEXEC') or die;
 
-$attributes = array();
+$id = '';
 
-if ($item->anchor_title)
+if (($tagId = $params->get('tag_id', '')))
 {
-	$attributes['title'] = $item->anchor_title;
+	$id = ' id="' . $tagId . '"';
 }
 
-if ($item->anchor_css)
+// The menu class is deprecated. Use nav instead
+?>
+
+<nav class="blue-grey darken-3 z-depth-0 <?php echo $moduleclass_sfx ?>">
+  
+<div class="container ">
+<div class="nav-wrapper">
+<a id="logo-container" href="/dev/coolwebcreations/" class="brand-logo"><img class="responsive-img" style="width: 90%; padding: 5px;" src="/dev/coolwebcreations/images/logos/coolwebcreations_final_186x57_white.png" alt="cool Webcreations"></a>
+					<a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
+<ul id="nav-mobile" class="<?php echo $class_sfx ?>" style="transform: translateX(0%);">
+<?php foreach ($list as $i => &$item)
 {
-	$attributes['class'] = $item->anchor_css;
-}
+	$class = 'item-' . $item->id;
 
-if ($item->anchor_rel)
-{
-	$attributes['rel'] = $item->anchor_rel;
-}
-
-$linktype = $item->title;
-
-if ($item->menu_image)
-{
-	$linktype = JHtml::_('image', $item->menu_image, $item->title);
-
-	if ($item->params->get('menu_text', 1))
+	if ($item->id == $default_id)
 	{
-		$linktype .= '<span class="image-title">' . $item->title . '</span>';
+		$class .= ' default';
+	}
+
+
+	if (($item->id == $active_id) || ($item->type == 'alias' && $item->params->get('aliasoptions') == $active_id))
+	{
+		$class .= ' current';
+	}
+
+	if (in_array($item->id, $path))
+	{
+		$class .= ' active';
+	}
+	elseif ($item->type == 'alias')
+	{
+		$aliasToId = $item->params->get('aliasoptions');
+
+		if (count($path) > 0 && $aliasToId == $path[count($path) - 1])
+		{
+			$class .= ' active';
+		}
+		elseif (in_array($aliasToId, $path))
+		{
+			$class .= ' alias-parent-active';
+		}
+	}
+
+	if ($item->type == 'separator')
+	{
+		$class .= ' divider';
+	}
+
+	if ($item->deeper)
+	{
+		$class .= ' deeper';
+	}
+
+	if ($item->parent)
+	{
+		$class .= ' parent';
+	}
+
+	echo '<li class="' . $class . '">';
+
+	switch ($item->type) :
+		case 'separator':
+		case 'component':
+		case 'heading':
+		case 'url':
+			require JModuleHelper::getLayoutPath('mod_menu', 'default_' . $item->type);
+			break;
+
+		default:
+			require JModuleHelper::getLayoutPath('mod_menu', 'default_url');
+			break;
+	endswitch;
+
+	// The next item is deeper.
+	if ($item->deeper)
+	{
+		echo '<ul class="dropdown-content">';
+	}
+	// The next item is shallower.
+	elseif ($item->shallower)
+	{
+		echo '</li>';
+		echo str_repeat('</ul></li>', $item->level_diff);
+	}
+	// The next item is on the same level.
+	else
+	{
+		echo '</li>';
 	}
 }
-
-if ($item->browserNav == 1)
+?></ul>
+  
+  </div>
+  </div>
+</nav>
+  
+  <ul class="side-nav" id="mobile-menu" style="transform: translateX(0px);">
+  <?php foreach ($list as $i => &$item)
 {
-	$attributes['target'] = '_blank';
-}
-elseif ($item->browserNav == 2)
-{
-	$options = 'toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,' . $params->get('window_open');
+	$class = 'item-' . $item->id;
 
-	$attributes['onclick'] = "window.open(this.href, 'targetWindow', '" . $options . "'); return false;";
-}
+	if ($item->id == $default_id)
+	{
+		$class .= ' default';
+	}
 
-echo JHtml::_('link', JFilterOutput::ampReplace(htmlspecialchars($item->flink, ENT_COMPAT, 'UTF-8')), $linktype, $attributes);
+
+	if (($item->id == $active_id) || ($item->type == 'alias' && $item->params->get('aliasoptions') == $active_id))
+	{
+		$class .= ' current';
+	}
+
+	if (in_array($item->id, $path))
+	{
+		$class .= ' active';
+	}
+	elseif ($item->type == 'alias')
+	{
+		$aliasToId = $item->params->get('aliasoptions');
+
+		if (count($path) > 0 && $aliasToId == $path[count($path) - 1])
+		{
+			$class .= ' active';
+		}
+		elseif (in_array($aliasToId, $path))
+		{
+			$class .= ' alias-parent-active';
+		}
+	}
+
+	if ($item->type == 'separator')
+	{
+		$class .= ' divider';
+	}
+
+	if ($item->deeper)
+	{
+		$class .= ' deeper';
+	}
+
+	if ($item->parent)
+	{
+		$class .= ' parent';
+	}
+
+	echo '<li class="' . $class . '">';
+
+	switch ($item->type) :
+		case 'separator':
+		case 'component':
+		case 'heading':
+		case 'url':
+			require JModuleHelper::getLayoutPath('mod_menu', 'default_' . $item->type);
+			break;
+
+		default:
+			require JModuleHelper::getLayoutPath('mod_menu', 'default_url');
+			break;
+	endswitch;
+
+	// The next item is deeper.
+	if ($item->deeper)
+	{
+		echo '<ul class="dropdown-content">';
+	}
+	// The next item is shallower.
+	elseif ($item->shallower)
+	{
+		echo '</li>';
+		echo str_repeat('</ul></li>', $item->level_diff);
+	}
+	// The next item is on the same level.
+	else
+	{
+		echo '</li>';
+	}
+}
+?></ul>
