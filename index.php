@@ -59,44 +59,34 @@ $doc->addStyleSheet($tpath.'/css/template.css');
 	<script type="text/javascript" src="<?php echo $tpath; ?>/js/respond.min.js"></script>
 	<![endif]-->
 </head>
-  
+<header>
+  	<!-- Top Navigation and logo -->
+  	<div class="navbar-fixed">
+		<?php if ($this->countModules('top-navigation') && $hideByView == false && $hideByEdit == false): ?>
+			<jdoc:include type="modules" name="top-navigation" style="none" />
+		<?php endif; ?>		
+	</div>   
+</header>  
 <body class="<?php echo (($menu->getActive() == $menu->getDefault()) ? ('front') : ('site')).' '.$active->alias.' '.$pageclass; ?>" role="document">
-	<div class="navbar-fixed">
-		<nav class="navbar-fixed transparent">
-			<div class="container ">
-				<div class="nav-wrapper">
-					<?php if ($this->countModules('top-navigation') && $hideByView == false && $hideByEdit == false): ?>				
-					<a id="logo-container" href="<?php echo $this->baseurl; ?>/" class="brand-logo"><img class="" style="width: 100%; padding: 5px;" src="images/logos/coolwebcreations_white_180px.png" alt="cool Webcreations"></a>
-					<a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
-					<jdoc:include type="modules" name="top-navigation" style="none" />
-					<?php endif; ?>	
-					<!--   mobile menu here   -->	
-					<jdoc:include type="modules" name="collapse-left" style="none" />
-				</div>       
-			</div>
-		</nav>
-	</div>
+
+  		<!--   Parallax1 Background Image   -->
+		<?php if ($this->countModules('parallax1') && $hideByView == false && $hideByEdit == false): ?>
+		<jdoc:include type="modules" name="parallax1" />
+		<?php endif; ?>      
 
 	<div class="center">
 		<jdoc:include type="message" />
 	</div>
 
-	<!--   intro Moduleposition   -->
+
+<!--   intro Moduleposition   -->
 	<?php if ($this->countModules('intro') && $hideByView == false && $hideByEdit == false): ?>
-		<div class="row">
+		<div class="section">
 					<jdoc:include type="modules" name="intro" />
 		</div>
-	<?php endif; ?>
-  
-	<!--   Parallax Background Image   -->
-	<?php if ($this->countModules('parallax1') && $hideByView == false && $hideByEdit == false): ?>
-		<div class="parallax-container">
-					<jdoc:include type="modules" name="parallax1" />
-		</div>
-	<?php endif; ?>
+	<?php endif; ?>  
   
     	<!--   Breadcrumb Moduleposition   -->
-	<div class="section">
 		<?php if ($this->countModules('breadcrumb') && $hideByView == false && $hideByEdit == false): ?>
 		<div class="container">
 			<div class="col s12">
@@ -104,33 +94,30 @@ $doc->addStyleSheet($tpath.'/css/template.css');
             		</div>
 		</div>
 		<?php endif; ?>
-	</div>
 
 	<!--   Promo Moduleposition   -->	
-	<div class="section">
-		<div class="container">
-					<?php if ($this->countModules('promo') && $hideByView == false && $hideByEdit == false): ?>	
-			<div class="row center">
-				<div class="col s12">
-					<jdoc:include type="modules" name="promo" />
-				</div>
-			</div>
-					<?php endif; ?>			
+
+      	<div class="container">
+        	<?php if ($this->countModules('promo') && $hideByView == false && $hideByEdit == false): ?>	
+			<div class="center">
+				<jdoc:include type="modules" name="promo" />
+				<?php endif; ?>	
+            </div>  
 		</div>
-	  </div>
+			
 	  
 	<!--   Banner Moduleposition   -->
-    	<div class="section">
+
 		<div class="container">
-			<div class="row center">
+			<div class="center">
 				<?php if ($this->countModules('banner') && $hideByView == false && $hideByEdit == false): ?>
             			<jdoc:include type="modules" name="banner" />
             			<?php endif; ?>
 			</div>
 		</div>
-	</div>
 
-	<!--   Parallax Background Image   -->
+
+	<!--   Parallax2 Background Image   -->
 	<?php if ($this->countModules('parallax2') && $hideByView == false && $hideByEdit == false): ?>
 	<div class="parallax-container">
 		<jdoc:include type="modules" name="parallax2" />
@@ -188,7 +175,7 @@ $doc->addStyleSheet($tpath.'/css/template.css');
 		</div>
 	</div>
 
-	<!--   Parallax Background Image   -->
+	<!--   Parallax3 Background Image   -->
 	<?php if ($this->countModules('parallax3') && $hideByView == false && $hideByEdit == false): ?>
 		<div class="parallax-container">
 					<jdoc:include type="modules" name="parallax3" />
