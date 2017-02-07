@@ -1,5 +1,4 @@
 <?php defined( '_JEXEC' ) or die; 
-
 // variables
 $app = JFactory::getApplication();
 $doc = JFactory::getDocument(); 
@@ -9,17 +8,13 @@ $params = $app->getParams();
 $pageclass = $params->get('pageclass_sfx');
 $tpath = $this->baseurl.'/templates/'.$this->template;
 $templateparams	= $app->getTemplate(true)->params;
-
 // generator tag
 $this->setGenerator(null);
-
 // force latest IE & chrome frame
 $doc->setMetadata('x-ua-compatible','IE=edge,chrome=1');
-
 // css
 $doc->addStyleSheet($tpath.'/css/materialize.css');
 $doc->addStyleSheet($tpath.'/css/template.css');
-
 ?><!doctype html>
 
 <html lang="<?php echo $this->language; ?>">
