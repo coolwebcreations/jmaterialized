@@ -73,10 +73,10 @@
 					size="30"
 				/>
 				<field
-					name="nav_background"
+					name="nav_suffix"
 					type="text"
 					default=""
-					label="Background CSS color"
+					label="Top Navigation Suffix"
 					description=""
 					size="30"
 				/>
