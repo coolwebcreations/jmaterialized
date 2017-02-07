@@ -5,7 +5,6 @@
  *
  * @copyright   Copyright (C) 2005 - 2016 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
- * Template JMaterialized by cool Webcreations
  */
 
 defined('_JEXEC') or die;
@@ -19,7 +18,14 @@ if (($tagId = $params->get('tag_id', '')))
 
 // The menu class is deprecated. Use nav instead
 ?>
-<ul class="<?php echo $class_sfx ?>" <?php //echo $id; ?>>
+
+<nav class="<?php if ($this->params->get('nav_suffix')) : ?>">
+  
+<div class="container ">
+<div class="nav-wrapper">
+<a id="logo-container" href="<?php echo $this->baseurl; ?>" class="brand-logo"><img style="height: 65px; padding: 5px;" src="<?php if ($this->params->get('logo_url')) : ?>" alt="cool Webcreations"></a>
+					<a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
+<ul id="nav-mobile" class="<?php echo $class_sfx ?>" style="transform: translateX(0%);">
 <?php foreach ($list as $i => &$item)
 {
 	$class = 'item-' . $item->id;
@@ -101,8 +107,13 @@ if (($tagId = $params->get('tag_id', '')))
 	}
 }
 ?></ul>
-<ul class=" side-nav" id="mobile-menu" <?php //echo $id; ?>>
-<?php foreach ($list as $i => &$item)
+  
+  </div>
+  </div>
+</nav>
+  
+  <ul class="side-nav" id="mobile-menu" style="transform: translateX(0px);">
+  <?php foreach ($list as $i => &$item)
 {
 	$class = 'item-' . $item->id;
 
