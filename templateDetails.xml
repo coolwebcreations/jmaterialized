@@ -60,5 +60,28 @@
 		<position>footer3</position>
         	<position>debug</position>
 	</positions>
+	
+	<config>
+		<fields name="params">
+			<fieldset name="content" label="HEADER">
+				<field
+					name="Logo Image"
+					type="text"
+					default=""
+					label="URL Logo"
+					description=""
+					size="30"
+				/>
+				<field
+					name="Navigation Background"
+					type="text"
+					default=""
+					label="Background CSS color"
+					description=""
+					size="30"
+				/>
+			</fieldset>
+		</fields>
+	</config>
 
 </extension>
