@@ -23,7 +23,7 @@ if (($tagId = $params->get('tag_id', '')))
   
 <div class="container ">
 <div class="nav-wrapper">
-<a id="logo-container" href="<?php echo $site_url; ?>" class="brand-logo"><img class="responsive-img" style="width: 90%; padding: 5px;" src="/dev/coolwebcreations/images/logos/coolwebcreations_final_186x57_white.png" alt="cool Webcreations"></a>
+<a id="logo-container" href="<?php echo $site_url; ?>" class="brand-logo"><img class="responsive-img" style="height: 55px; padding: 5px;" src="/dev/coolwebcreations/images/logos/coolwebcreations_final_186x57_white.png" alt="cool Webcreations"></a>
 					<a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
 <ul id="nav-mobile" class="<?php echo $class_sfx ?>" style="transform: translateX(0%);">
 <?php foreach ($list as $i => &$item)
