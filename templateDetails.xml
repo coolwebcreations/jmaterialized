@@ -63,7 +63,7 @@
 	
 	<config>
 		<fields name="params">
-			<fieldset name="content" label="HEADER">
+			<fieldset name="content" label="Header Configurations">
 				<field
 					name="logo_url"
 					type="text"
