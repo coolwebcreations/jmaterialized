@@ -10,9 +10,11 @@
 defined('_JEXEC') or die;
 ?>
 
-<div class="parallax">
-  <img class="responsive-img" src="<?php echo $params->get('backgroundimage');?>">
-</div>
-<div class="<?php echo $moduleclass_sfx ?>">
-	<?php echo $module->content;?>
+<div class="parallax-container hide-on-med-and-down">
+	<div class="parallax">
+  		<img class="responsive-img" src="<?php echo $params->get('backgroundimage');?>">
+	</div>
+	<div class="<?php echo $moduleclass_sfx ?>">
+		<?php echo $module->content;?>
+	</div>  		
 </div>
