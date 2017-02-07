@@ -4,12 +4,12 @@
 <extension version="3.3" type="template" client="site" method="upgrade">
 	
 	<name>JMaterialized</name>
-	<creationDate>2017-02-06</creationDate>
+	<creationDate>2017-02-07</creationDate>
 	<author>Mike Brandner</author>
 	<copyright>Copyright © 2017 coolwebcreations.de</copyright>
 	<authorEmail>mike@coolwebcreations.de</authorEmail>
 	<authorUrl>http://www.coolwebcreations.de</authorUrl>
-	<version>0.0.9</version>
+	<version>0.0.10</version>
 	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
 	<description><![CDATA[ 
 		<h1>JMaterialized Template</h1>
@@ -38,27 +38,27 @@
 	
 	<positions>
 		<position>top-navigation</position>
-        <position>intro</position>      
-      	<position>collapse-left</position>
+        	<position>intro</position>      
+      		<position>collapse-left</position>
 		<position>parallax1</position>
-        <position>parallax2</position>
-        <position>parallax3</position>
+        	<position>parallax2</position>
+        	<position>parallax3</position>
 		<position>promo</position>
-        <position>breadcrumb</position>
+       	 	<position>breadcrumb</position>
 		<position>banner</position>
-        <position>section-top</position>
+        	<position>section-top</position>
 		<position>section1</position>
-        <position>section2</position>
-        <position>section3</position>
+        	<position>section2</position>
+        	<position>section3</position>
 		<position>content-top-1</position>
-        <position>content-top-2</position>
-        <position>content-bottom-1</position>
-        <position>content-bottom-2</position>
-        <position>content-bottom-3</position>
+        	<position>content-top-2</position>
+        	<position>content-bottom-1</position>
+        	<position>content-bottom-2</position>
+        	<position>content-bottom-3</position>
 		<position>footer1</position>
 		<position>footer2</position>
 		<position>footer3</position>
-        <position>debug</position>
+        	<position>debug</position>
 	</positions>
 
 </extension>
