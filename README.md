@@ -8,8 +8,9 @@ A Joomla! materialdesign Template by using the materialize CSS front end framewo
 A Joomla! 3.x Template based on the Material Design by Google.
 
 ### Design Classes
-Use MaterialzeCSS CSS classes as module suffix or in your content HTML code for layout and design.
-In most cases, it will work fine.
+Use the materialize CSS classes as module suffix or in your content HTML code for layout and design.<br />
+In most cases, it will working fine.<br />
+More infomations and samples: http://materializecss.com/
 
 #### Including
 - Material Design Icons | https://material.io/icons/
