@@ -23,7 +23,7 @@ if (($tagId = $params->get('tag_id', '')))
 <div class="nav-wrapper">
 <a id="logo-container" href="<?php echo JURI::base(); ?>" class="brand-logo"><img style="height: 65px; padding: 5px;" src="<?php echo JURI::base() . $params->get('logo_url'); ?>" alt="cool Webcreations"></a>
 					<a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
-<ul id="nav-mobile" class="<?php echo $class_sfx ?>" style="transform: translateX(0%);">
+<ul id="nav-mobile" class="right <?php echo $class_sfx ?>" style="transform: translateX(0%);">
 <?php foreach ($list as $i => &$item)
 {
 	$class = 'item-' . $item->id;
