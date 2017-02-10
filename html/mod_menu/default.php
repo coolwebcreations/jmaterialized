@@ -17,13 +17,7 @@ if (($tagId = $params->get('tag_id', '')))
 }
 // The menu class is deprecated. Use nav instead
 ?>
-<nav class="<?php echo $params->get('nav_suffix'); ?>">
-  
-<div class="container ">
-<div class="nav-wrapper">
-<a id="logo-container" href="<?php echo JURI::base(); ?>" class="brand-logo"><img style="height: 65px; padding: 5px;" src="<?php echo JURI::base() . $params->get('logo_url'); ?>" alt="cool Webcreations"></a>
-					<a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
-<ul id="nav-mobile" class="right <?php echo $class_sfx ?>" style="transform: translateX(0%);">
+<ul id="nav-mobile" class="<?php echo $class_sfx ?>" style="transform: translateX(0%);">
 <?php foreach ($list as $i => &$item)
 {
 	$class = 'item-' . $item->id;
@@ -33,7 +27,7 @@ if (($tagId = $params->get('tag_id', '')))
 	}
 	if (($item->id == $active_id) || ($item->type == 'alias' && $item->params->get('aliasoptions') == $active_id))
 	{
-		$class .= ' current';
+		$class .= ' active';
 	}
 	if (in_array($item->id, $path))
 	{
@@ -104,7 +98,7 @@ if (($tagId = $params->get('tag_id', '')))
 	}
 	if (($item->id == $active_id) || ($item->type == 'alias' && $item->params->get('aliasoptions') == $active_id))
 	{
-		$class .= ' current';
+		$class .= ' active';
 	}
 	if (in_array($item->id, $path))
 	{
@@ -164,7 +158,3 @@ if (($tagId = $params->get('tag_id', '')))
 	}
 }
 ?></ul>
-
-  </div>
-  </div>
-</nav>
