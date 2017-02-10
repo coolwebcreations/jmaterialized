@@ -56,17 +56,19 @@ $doc->addStyleSheet($tpath.'/css/template.css');
 </head>
 <header>
   	<!-- Top Navigation and logo -->
-	<nav class="<?php echo $templateparams->get('nav_suffix'); ?>">
-		<div class="container ">
-			<div class="nav-wrapper">
-			<a id="logo-container" href="<?php echo JURI::base(); ?>" class="brand-logo"><img style="height: 65px; padding: 5px;" src="<?php echo JURI::base() . $templateparams->get('logo_url'); ?>" alt="<?php echo $app->getCfg( 'sitename' ); ?>"></a>
-            <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
-				<?php if ($this->countModules('top-navigation') && $hideByView == false && $hideByEdit == false): ?>
-				<jdoc:include type="modules" name="top-navigation" style="none" />
-				<?php endif; ?>		
+	<div class="navbar-fixed">
+		<nav class="<?php echo $templateparams->get('nav_suffix'); ?>">
+			<div class="container ">
+				<div class="nav-wrapper">
+					<a id="logo-container" href="<?php echo JURI::base(); ?>" class="brand-logo"><img style="height: 65px; padding: 5px;" src="<?php echo JURI::base() . $templateparams->get('logo_url'); ?>" alt="<?php echo $app->getCfg( 'sitename' ); ?>"></a>
+         				<a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
+					<?php if ($this->countModules('top-navigation') && $hideByView == false && $hideByEdit == false): ?>
+					<jdoc:include type="modules" name="top-navigation" style="none" />
+					<?php endif; ?>		
+				</div>
 			</div>
-		</div>
-	</nav>
+		</nav>
+  	</div>
 </header>  
 <body class="<?php echo (($menu->getActive() == $menu->getDefault()) ? ('front') : ('site')).' '.$active->alias.' '.$pageclass; ?>" role="document">
 
