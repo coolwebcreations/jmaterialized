@@ -59,7 +59,7 @@ $doc->addStyleSheet($tpath.'/css/template.css');
 	<nav class="<?php echo $templateparams->get('nav_suffix'); ?>">
 		<div class="container ">
 			<div class="nav-wrapper">
-			<a id="logo-container" href="<?php echo JURI::base() . $templateparams->get('logo_url'); ?>" class="brand-logo"><img style="height: 65px; padding: 5px;" src="<?php echo JURI::base() . $params->get('logo_url'); ?>" alt="<?php echo $params->get('sitedescription'); ?>"></a>
+			<a id="logo-container" href="<?php echo JURI::base(); ?>" class="brand-logo"><img style="height: 65px; padding: 5px;" src="<?php echo JURI::base() . $templateparams->get('logo_url'); ?>" alt="<?php echo $app->getCfg( 'sitename' ); ?>"></a>
             <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
 				<?php if ($this->countModules('top-navigation') && $hideByView == false && $hideByEdit == false): ?>
 				<jdoc:include type="modules" name="top-navigation" style="none" />
@@ -146,7 +146,7 @@ $doc->addStyleSheet($tpath.'/css/template.css');
 	<?php endif; ?>	
 	
 	<!-- Footer -->
-	<footer class="page-footer <?php echo JURI::base() . $params->get('footer_suffix'); ?>">
+	<footer class="page-footer <?php echo $templateparams->get('footer_suffix'); ?>">
 		<div class="container">
 			<div class="row">
 	  
@@ -169,10 +169,10 @@ $doc->addStyleSheet($tpath.'/css/template.css');
 
 			</div>
 		</div>
-		<div class="footer-copyright">
+		<div class="section">
 			<div class="container">
-				&copy; <?php echo date('Y'); ?> <?php echo JURI::base() . $params->get('sitedescription'); ?>
-				Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+				&copy; <?php echo date('Y'); ?> <?php echo $app->getCfg( 'sitename' ); ?>
+				Powered by <a class="orange-text text-lighten-3" href="http://materializecss.com">MaterializeCSS</a>
 			</div>
 		</div>
 	</footer>
