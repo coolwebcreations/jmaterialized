@@ -38,23 +38,14 @@
 	
 	<positions>
 		<position>top-navigation</position>
-        	<position>intro</position>      
-      		<position>collapse-left</position>
-		<position>parallax1</position>
-        	<position>parallax2</position>
-        	<position>parallax3</position>
-		<position>promo</position>
-       	 	<position>breadcrumb</position>
-		<position>banner</position>
-        	<position>section-top</position>
+        	<position>parallax</position>
+        	<position>breadcrumb</position>
 		<position>section1</position>
         	<position>section2</position>
         	<position>section3</position>
-		<position>content-top-1</position>
-        	<position>content-top-2</position>
-        	<position>content-bottom-1</position>
-        	<position>content-bottom-2</position>
-        	<position>content-bottom-3</position>
+		<position>section4</position>
+        	<position>section5</position>
+        	<position>section6</position>
 		<position>footer1</position>
 		<position>footer2</position>
 		<position>footer3</position>
@@ -76,7 +67,17 @@
 					name="nav_suffix"
 					type="text"
 					default=""
-					label="Top Navigation Suffix"
+					label="Top Navigation CSS Classes"
+					description=""
+					size="30"
+				/>
+			</fieldset>
+			<fieldset name="content" label="Footer Configurations">
+				<field
+					name="footer_suffix"
+					type="text"
+					default=""
+					label="Footer CSS Classes"
 					description=""
 					size="30"
 				/>
