@@ -61,10 +61,11 @@ $doc->addStyleSheet($tpath.'/css/template.css');
 </head>
 <header>
   	<!-- Top Navigation and logo -->
-	<nav class="<?php echo $params->get('nav_suffix'); ?>">
+	<nav class="<?php echo $templateparams->get('nav_suffix'); ?>">
 		<div class="container ">
 			<div class="nav-wrapper">
-			<a id="logo-container" href="<?php echo JURI::base(); ?>" class="brand-logo"><img style="height: 65px; padding: 5px;" src="<?php echo JURI::base() . $params->get('logo_url'); ?>" alt="<?php echo JURI::base() . $params->get('sitedescription'); ?>"></a>
+			<a id="logo-container" href="<?php echo JURI::base() . $templateparams->get('logo_url'); ?>" class="brand-logo"><img style="height: 65px; padding: 5px;" src="<?php echo JURI::base() . $params->get('logo_url'); ?>" alt="<?php echo $params->get('sitedescription'); ?>"></a>
+            <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
 				<?php if ($this->countModules('top-navigation') && $hideByView == false && $hideByEdit == false): ?>
 				<jdoc:include type="modules" name="top-navigation" style="none" />
 				<?php endif; ?>		
