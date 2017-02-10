@@ -6,6 +6,18 @@ A Joomla! materialdesign Template by using the materialize CSS front end framewo
 
 ## Description
 A Joomla! 3.x Template based on the Material Design by Google.
+#### Module positions
+     <top-navigation>
+     <breadcrumb>
+     <section1>
+     <section2>
+     <section3>
+     <parallax>
+    -- Component --
+     <section4>
+     <section5>
+     <section6>
+     <footer1> <footer2> <footer3>
 
 ### Design Classes
 Use the materialize CSS classes as module suffix or in your content HTML code for layout and design.<br />
