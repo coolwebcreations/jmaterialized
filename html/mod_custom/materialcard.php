@@ -10,20 +10,20 @@
 
 defined('_JEXEC') or die;
 ?>
-     <div class="container">
-         <div class="<?php echo $moduleclass_sfx ?>">
-            <?php if ($params->get('backgroundimage')) : ?>
-            <div class="card-image">
-              <img src="<?php echo $params->get('backgroundimage');?>">
-              <span class="card-title"><?php echo $module->title;?></span>
-            </div>
-            <?php endif;?>
-            <?php if ($module->showtitle) : ?>
-            	<span class="card-title">
-                <h2><?php echo $module->title;?></h2></span>
-            <?php endif;?>
-            <div class="card-content">
-              <?php echo $module->content;?>
-            </div>
-         </div>
-      </div>
+<div class="container">
+     <div class="<?php echo $moduleclass_sfx ?>">
+          <?php if ($params->get('backgroundimage')) : ?>
+          <div class="card-image">
+               <img src="<?php echo $params->get('backgroundimage');?>">
+               <span class="card-title"><?php echo $module->title;?></span>
+          </div>
+          <?php endif;?>
+          <?php if ($module->showtitle) : ?>
+               <span class="card-title">
+               <h2><?php echo $module->title;?></h2></span>
+          <?php endif;?>
+          <div class="card-content">
+               <?php echo $module->content;?>
+          </div>
+     </div>
+</div>
