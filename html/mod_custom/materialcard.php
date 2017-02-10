@@ -10,8 +10,8 @@
 
 defined('_JEXEC') or die;
 ?>
-
-          <div class="<?php echo $moduleclass_sfx ?>">
+     <div class="container">
+         <div class="<?php echo $moduleclass_sfx ?>">
             <?php if ($params->get('backgroundimage')) : ?>
             <div class="card-image">
               <img src="<?php echo $params->get('backgroundimage');?>">
@@ -25,4 +25,5 @@ defined('_JEXEC') or die;
             <div class="card-content">
               <?php echo $module->content;?>
             </div>
-          </div>
+         </div>
+      </div>
